@@ -1,6 +1,6 @@
-import 'package:app_tesrt/models/manga.dart';
-import 'package:app_tesrt/views/add_manga/add_manga_page.dart';
-import 'package:app_tesrt/views/app_widget.dart';
+import 'package:my_manga_app/models/manga.dart';
+import 'package:my_manga_app/views/add_manga/add_manga_page.dart';
+import 'package:my_manga_app/views/app_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:drag_and_drop_lists/drag_and_drop_lists.dart';
 import 'package:http/http.dart' as http;

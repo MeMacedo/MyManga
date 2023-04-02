@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.app_tesrt">
+    package="com.example.my_manga_app">
    <application
         android:label="Reading List"
         android:icon="@mipmap/ic_launcher">

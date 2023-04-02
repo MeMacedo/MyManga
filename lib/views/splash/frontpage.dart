@@ -1,4 +1,4 @@
-import 'package:app_tesrt/views/home/home.dart';
+import 'package:my_manga_app/views/home/home.dart';
 import 'package:flutter/material.dart';
 
 class FrontPageScreen extends StatelessWidget {

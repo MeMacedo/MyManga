@@ -1,4 +1,4 @@
-import 'package:app_tesrt/views/add_manga/add_manga_form_controller.dart';
+import 'package:my_manga_app/views/add_manga/add_manga_form_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

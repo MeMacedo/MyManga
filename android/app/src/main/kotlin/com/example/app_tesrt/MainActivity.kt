@@ -1,4 +1,4 @@
-package com.example.app_tesrt
+package com.example.my_manga_app
 
 import io.flutter.embedding.android.FlutterActivity
 

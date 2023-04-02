@@ -5,12 +5,12 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "app_tesrt",
+			"name": "my_manga_app",
 			"request": "launch",
 			"type": "dart"
 		},
 		{
-			"name": "app_tesrt (profile mode)",
+			"name": "my_manga_app (profile mode)",
 			"request": "launch",
 			"type": "dart",
 			"flutterMode": "profile"

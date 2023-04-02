@@ -1,12 +1,11 @@
-import 'package:app_tesrt/src/Shared/Models/manga_model.dart';
-import 'package:app_tesrt/src/features/add_manga/add_manga_page.dart';
+import 'package:app_tesrt/models/manga.dart';
+import 'package:app_tesrt/views/add_manga/add_manga_page.dart';
+import 'package:app_tesrt/views/app_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:drag_and_drop_lists/drag_and_drop_lists.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
-
-import '../../app_widget.dart';
 
 class HomeScreenPage extends StatefulWidget {
   const HomeScreenPage({Key? key}) : super(key: key);

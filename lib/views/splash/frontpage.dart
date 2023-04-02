@@ -1,4 +1,4 @@
-import 'package:app_tesrt/src/features/home/home.dart';
+import 'package:app_tesrt/views/home/home.dart';
 import 'package:flutter/material.dart';
 
 class FrontPageScreen extends StatelessWidget {

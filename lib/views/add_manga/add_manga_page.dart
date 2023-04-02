@@ -1,4 +1,4 @@
-import 'package:app_tesrt/src/features/add_manga/add_manga_form_field.dart';
+import 'package:app_tesrt/views/add_manga/add_manga_form_field.dart';
 import 'package:flutter/material.dart';
 
 class AddMidiaPage extends StatefulWidget {

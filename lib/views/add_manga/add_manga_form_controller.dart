@@ -1,4 +1,4 @@
-import 'package:app_tesrt/src/Shared/Models/manga_model.dart';
+import 'package:app_tesrt/models/manga.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 

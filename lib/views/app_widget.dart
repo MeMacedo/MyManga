@@ -1,8 +1,7 @@
-import 'package:app_tesrt/src/features/add_manga/add_manga_form_controller.dart';
+import 'package:app_tesrt/views/add_manga/add_manga_form_controller.dart';
+import 'package:app_tesrt/views/splash/frontpage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'features/splash/frontpage.dart';
 
 class MyApp extends StatelessWidget {
   static const title = 'Lista de Leitura';

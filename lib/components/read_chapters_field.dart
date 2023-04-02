@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../add_manga_form_controller.dart';
+import 'package:app_tesrt/views/add_manga/add_manga_form_controller.dart';
 
-class ChaptersField extends StatelessWidget {
+class ReadChaptersField extends StatelessWidget {
   final GlobalKey<FormState> formKey;
 
-  ChaptersField(this.formKey, {Key? key}) : super(key: key);
+  ReadChaptersField(this.formKey, {Key? key}) : super(key: key);
 
-  final TextEditingController _chaptersController = TextEditingController();
+  final TextEditingController _readChaptersController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    final AddMangaFormController controller =
-        context.read<AddMangaFormController>();
+    final controller = context.read<AddMangaFormController>();
 
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextFormField(
-          controller: _chaptersController,
+          controller: _readChaptersController,
           validator: (value) {
             if (value == null || value.isEmpty) {
               return null;
@@ -31,14 +30,14 @@ class ChaptersField extends StatelessWidget {
               }
             }
           },
-          onChanged: (chapters) {
-            controller.newManga.chapters = chapters;
-            controller.chaptersController = _chaptersController;
+          onChanged: (readChapters) {
+            controller.newManga.readChapters = readChapters;
+            controller.readChaptersController = _readChaptersController;
             controller.formKey = formKey;
           },
           decoration: const InputDecoration(
             border: OutlineInputBorder(),
-            labelText: 'Qnt. de Capítulos',
+            labelText: 'Capítulos Lidos',
           ),
           maxLines: 1,
         ),

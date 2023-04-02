@@ -1,13 +1,12 @@
+import 'package:app_tesrt/components/add_manga_button.dart';
+import 'package:app_tesrt/components/chapters_field.dart';
+import 'package:app_tesrt/components/favorite_checkbox.dart';
+import 'package:app_tesrt/components/read_chapters_field.dart';
+import 'package:app_tesrt/components/reading_checkbox.dart';
+import 'package:app_tesrt/components/sinopse_field.dart';
+import 'package:app_tesrt/components/title_field.dart';
+import 'package:app_tesrt/views/add_manga/add_manga_form_controller.dart';
 import 'package:flutter/material.dart';
-
-import 'components/favorite_checkbox.dart';
-import 'components/read_chapters_field.dart';
-import 'components/sinopse_field.dart';
-import 'components/chapters_field.dart';
-import 'components/title_field.dart';
-import 'add_manga_form_controller.dart';
-import 'components/add_manga_button.dart';
-import 'components/reading_checkbox.dart';
 
 class AddMangaForm extends StatefulWidget {
   const AddMangaForm({Key? key}) : super(key: key);

@@ -1,11 +1,27 @@
+import 'package:flutter/services.dart';
 import 'package:my_manga_app/constants/common/icons.dart';
 import 'package:my_manga_app/constants/common/strings.dart';
 import 'package:my_manga_app/constants/common/values.dart';
 import 'package:my_manga_app/views/home/home_view.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    Future.delayed(Duration(seconds: 4)).then((_) {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => HomeView()));
+    });
+    super.initState();
+  }
 
   Container _getSplashScreen() {
     return Container(
@@ -46,15 +62,13 @@ class SplashScreen extends StatelessWidget {
   }
 
   @override
+  void dispose() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const HomeView()),
-        );
-      },
-      child: _getSplashScreen(),
-    );
+    return _getSplashScreen();
   }
 }

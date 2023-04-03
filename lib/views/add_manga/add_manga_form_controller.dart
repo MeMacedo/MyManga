@@ -1,6 +1,5 @@
-import 'package:my_manga_app/models/manga.dart';
+import 'package:my_manga_app/models/manga/manga.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 enum AddMangaFormState { idle, success, error, loading }
 
@@ -28,7 +27,7 @@ class AddMangaFormController extends ChangeNotifier {
       notifyListeners();
 
       try {
-        await http.post(url, body: newManga.toJson());
+        //await http.post(url, body: newManga.toJson());
         state = AddMangaFormState.success;
         cleanAll();
         notifyListeners();

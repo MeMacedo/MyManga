@@ -12,19 +12,28 @@ import '../../controllers/home/home_controller.dart';
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
 
-  List<Widget> _getCategoryMangas() {
-    return controller.mangas
-        .map((manga) => MangaListTile(manga: manga))
-        .toList();
+  List<Widget> _getCategoryMangas(category) {
+    final mangas =
+        controller.mangas.map((manga) => MangaListTile(manga: manga));
+    if (category == 'Favoritos') {
+      return mangas
+          .where((listTile) => (listTile.manga.isFavorite ?? false))
+          .toList();
+    } else if (category == 'Lendo') {
+      return mangas
+          .where((listTile) => (listTile.manga.isReading ?? false))
+          .toList();
+    }
+    return mangas.toList();
   }
 
   List<Widget> _getMangaCategories() {
     if (controller.mangas.isNotEmpty) {
       final categoriesListing = controller.mangaCategories
           .map(
-            (categories) => ExpansionTile(
-              title: Text(categories),
-              children: _getCategoryMangas(),
+            (category) => ExpansionTile(
+              title: Text(category),
+              children: _getCategoryMangas(category),
             ),
           )
           .cast<Widget>()

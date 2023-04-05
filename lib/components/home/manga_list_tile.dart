@@ -18,7 +18,7 @@ class MangaListTile extends StatelessWidget {
       child: FittedBox(
         fit: BoxFit.fill,
         child: manga.imageUrl.isNullOrEmpty()
-            ? Image.asset(AppIcons.image)
+            ? const Icon(Icons.image)
             : Image.network(
                 manga.imageUrl!,
               ),
@@ -61,19 +61,25 @@ class MangaListTile extends StatelessWidget {
   }
 
   void _goToMangaInfoView() {
-    Get.to(() => const MangaInfoView());
+    Get.to(
+      () => const MangaInfoView(),
+      arguments: {'manga': manga},
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: const Color.fromRGBO(255, 252, 241, 1),
-      height: 100,
-      child: Row(
-        children: [
-          _getMangaCoverImage(),
-          Expanded(child: _getMangaInfo()),
-        ],
+    return GestureDetector(
+      onTap: _goToMangaInfoView,
+      child: Container(
+        color: const Color.fromRGBO(255, 252, 241, 1),
+        height: 100,
+        child: Row(
+          children: [
+            _getMangaCoverImage(),
+            Expanded(child: _getMangaInfo()),
+          ],
+        ),
       ),
     );
   }

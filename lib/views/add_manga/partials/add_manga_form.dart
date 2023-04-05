@@ -29,9 +29,10 @@ class _AddMangaFormState extends State<AddMangaForm> {
       child: FittedBox(
         fit: BoxFit.fill,
         child: controller.imageUrlController.text.isNullOrEmpty()
-            ? Image.asset(AppIcons.image)
+            ? const Icon(Icons.image)
             : Image.network(controller.imageUrlController.text),
         //TODO lidar com exception das imagens
+        //tODO Loading enquanto iamgem carrega
       ),
     );
   }

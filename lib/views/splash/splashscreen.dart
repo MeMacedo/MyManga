@@ -1,7 +1,8 @@
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:my_manga_app/constants/common/icons.dart';
 import 'package:my_manga_app/constants/common/strings.dart';
-import 'package:my_manga_app/constants/common/values.dart';
+import 'package:my_manga_app/theme/values.dart';
 import 'package:my_manga_app/views/home/home_view.dart';
 import 'package:flutter/material.dart';
 
@@ -16,9 +17,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Future.delayed(Duration(seconds: 4)).then((_) {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => HomeView()));
+    Future.delayed(const Duration(seconds: 4)).then((_) {
+      Get.off(() => const HomeView());
     });
     super.initState();
   }
@@ -35,11 +35,11 @@ class _SplashScreenState extends State<SplashScreen> {
           Padding(
             padding: EdgeInsets.symmetric(vertical: Values.spacing.small!),
           ),
-          const Text(
+          Text(
             Strings.welcome,
             style: TextStyle(
-              color: Color.fromRGBO(41, 40, 36, 1),
-              fontSize: 25,
+              color: const Color.fromRGBO(41, 40, 36, 1),
+              fontSize: Values.fontSize.extraLarge,
               fontWeight: FontWeight.bold,
               fontFamily: 'Inconsolata',
             ),

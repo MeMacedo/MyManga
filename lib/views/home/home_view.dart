@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:my_manga_app/components/common/my_manga_scaffold.dart';
 import 'package:my_manga_app/components/home/manga_list_tile.dart';
 import 'package:my_manga_app/constants/common/strings.dart';
+import 'package:my_manga_app/theme/values.dart';
 import 'package:my_manga_app/controllers/home/home_controller.dart';
 import 'package:my_manga_app/theme/app_colors.dart';
 
@@ -30,7 +31,7 @@ class HomeView extends GetView<HomeController> {
           .toList();
       return categoriesListing;
     }
-    return const [
+    return [
       Center(
         child: Padding(
           padding: EdgeInsets.all(8.0),
@@ -40,7 +41,7 @@ class HomeView extends GetView<HomeController> {
               color: Color.fromRGBO(0, 0, 0, 0.70),
               fontWeight: FontWeight.bold,
               fontFamily: 'Inconsolata',
-              fontSize: 20,
+              fontSize: Values.fontSize.large,
             ),
             textAlign: TextAlign.center,
           ),
@@ -51,7 +52,7 @@ class HomeView extends GetView<HomeController> {
 
   _getContent() {
     switch (controller.currentViewStatus.value) {
-      case HomeviewStatus.loading:
+      case HomeViewStatus.loading:
         return const Center(
           child: CircularProgressIndicator(
             color: AppColors.font,

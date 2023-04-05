@@ -13,7 +13,7 @@ class TitleField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextFormField(
-        controller: controller.titleController.value,
+        controller: controller.titleController,
         validator: (value) {
           if (value == null || value.isEmpty) {
             return 'Por favor, dê um título';

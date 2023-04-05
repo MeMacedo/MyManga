@@ -12,7 +12,8 @@ class AddMangaController extends GetxController {
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  Rx<TextEditingController> titleController = TextEditingController().obs;
+  TextEditingController titleController = TextEditingController();
+  TextEditingController imageUrlController = TextEditingController();
   TextEditingController sinopseController = TextEditingController();
   TextEditingController chaptersController = TextEditingController();
   TextEditingController readChaptersController = TextEditingController();
@@ -20,12 +21,14 @@ class AddMangaController extends GetxController {
   Rx<bool> isFavorite = false.obs;
 
   Rx<bool> isEnabled = false.obs;
+  Rx<bool> hasImage = false.obs;
 
   Rx<AddMangaViewStatus> currentViewStatus = AddMangaViewStatus.success.obs;
 
   void addManga() {
     final manga = Manga(
       title: titleController.value.text,
+      imageUrl: imageUrlController.text,
       sinopse: sinopseController.text,
       chapters: chaptersController.text,
       readChapters: readChaptersController.text,

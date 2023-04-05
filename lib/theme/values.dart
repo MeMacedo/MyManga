@@ -11,4 +11,10 @@ class Values {
     medium: 20,
     extraLarge: 60,
   );
+
+  static Sizes fontSize = const Sizes(
+    medium: 16,
+    large: 20,
+    extraLarge: 24,
+  );
 }

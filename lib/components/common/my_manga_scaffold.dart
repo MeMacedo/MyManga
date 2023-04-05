@@ -9,6 +9,7 @@ class MyMangaScaffold extends StatelessWidget {
     this.hasFloatingButton = false,
     this.floatingButtonAction,
     this.hasAppBar = true,
+    this.leading,
   }) : super(key: key);
 
   final String title;
@@ -16,6 +17,7 @@ class MyMangaScaffold extends StatelessWidget {
   final bool hasFloatingButton;
   final Function? floatingButtonAction;
   final bool hasAppBar;
+  final Widget? leading;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +26,7 @@ class MyMangaScaffold extends StatelessWidget {
           ? AppBar(
               title: Text(title),
               automaticallyImplyLeading: false,
+              leading: leading,
             )
           : null,
       floatingActionButton: hasFloatingButton

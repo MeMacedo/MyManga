@@ -6,7 +6,10 @@ Repaginação do meu primeiro projeto em Flutter!
 
 A V1, criada no começo de 2022, foi a primeira vez que criei um projeto Flutter. A ideia dele era construir algo parecido com o LetterBoxd, só que para mangás e, por enquanto, sem a interação entre usuários. Pra isso, eu fui seguindo um guia pelo youtube (do canal DotCode) e fui aprendendo um pouco do uso de Providers e tive o contato inicial com o Firebase. Não cheguei a desenvolver nenhum teste, que só fui descobrir que existia no meu primeiro mês de trabalho haha.
 
-Era essa aqui a carinha dele na época: 
+Era essa aqui a carinha dele na época, só com duas telas: 
+
+![Screenshot_20230405-144633](https://user-images.githubusercontent.com/88168375/230163688-0a5d498e-82c4-44c2-b246-64011f023cfa.png)
+![Screenshot_20230405-144658](https://user-images.githubusercontent.com/88168375/230163706-aaa515dd-6e6b-4a3b-96ed-60029d76ae5a.png)
 
 ## :sparkles: O que temos agora
 

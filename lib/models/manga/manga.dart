@@ -3,21 +3,23 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 
 class Manga {
-  String title;
-  String? sinopse;
-  String? readChapters;
-  String? chapters;
-  String? image;
-  bool? isReading;
-  bool? isFavorite;
+  const Manga({
+    required this.title,
+    this.sinopse = '',
+    this.readChapters = '',
+    this.chapters = '',
+    this.imageUrl,
+    this.isFavorite = false,
+    this.isReading = false,
+  });
 
-  Manga(this.title,
-      {this.sinopse = '',
-      this.readChapters = '',
-      this.chapters = '',
-      this.image,
-      this.isFavorite = false,
-      this.isReading = false});
+  final String title;
+  final String? sinopse;
+  final String? readChapters;
+  final String? chapters;
+  final String? imageUrl;
+  final bool? isReading;
+  final bool? isFavorite;
 
   Map<String, dynamic> toMap() {
     return {
@@ -25,35 +27,17 @@ class Manga {
       'sinopse': sinopse,
       'chapters': chapters,
       'readChapters': readChapters,
-      'image': image,
+      'imageUrl': imageUrl,
       'isReading': isReading,
       'isFavorite': isFavorite,
     };
   }
 
   factory Manga.fromMap(Map<String, dynamic> map) {
-    return Manga(map['title']);
+    return Manga(title: map['title']);
   }
 
   String toJson() => json.encode(toMap());
 
   factory Manga.fromJson(String source) => Manga.fromMap(json.decode(source));
-
-  Widget toListTile() {
-    return ListTile(
-      title: Text(
-        title,
-        style: const TextStyle(fontWeight: FontWeight.bold),
-      ),
-      leading: (image == null)
-          ? Image.asset(
-              "assets/free image icon png vector.png",
-            )
-          : Image.asset(image!),
-      trailing: const Icon(
-        Icons.close,
-        size: 20,
-      ),
-    );
-  }
 }
